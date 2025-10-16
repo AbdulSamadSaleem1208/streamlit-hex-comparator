@@ -18,14 +18,14 @@ st.title("🔢 Hex Hash Value Predictor")
 # Load Model
 # -------------------------------
 # Automatically locate the model file in the same folder
-model_file_path = os.path.join(os.getcwd(), "fine_tuned_gradient_boosting_model.joblib")
+model_file_path = os.path.join(os.getcwd(), "fine_tuned_gradient_boosting_model (2).joblib")
 
 loaded_model = None
 try:
     loaded_model = joblib.load(model_file_path)
     st.success("✅ Model loaded successfully.")
 except FileNotFoundError:
-    st.error("❌ Model file not found! Please make sure 'fine_tuned_gradient_boosting_model.joblib' is in the same directory.")
+    st.error("❌ Model file not found! Please make sure 'fine_tuned_gradient_boosting_model (2).joblib' is in the same directory.")
 except Exception as e:
     st.error(f"❌ An error occurred while loading the model: {e}")
 
@@ -89,3 +89,4 @@ if st.button("Predict"):
         st.success(f"✅ Prediction: {prediction}")
 
 st.caption("Built with ❤️ using Streamlit | Developed by Usman & Team")
+
